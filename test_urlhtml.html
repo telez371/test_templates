@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Invoice</title>
+</head>
+<body>
+    <h1>Invoice Number: {{ invoiceNumber }}</h1>
+    <p>Company: {{ company }}</p>
+    <p>Address: {{ address }}</p>
+    <p>Destination: {{ destinationName }}</p>
+    <p>Due Date: {{ dueDate }}</p>
+    <p>Issue Date: {{ issueDate }}</p>
+    <p>Notes: {{ notes }}</p>
+    <p>Subtotal: {{ subtotal }}</p>
+    <p>Total: {{ total }}</p>
+    <p>Paid: {{ paid }}</p>
+    <p>Amount Due: {{ amountDue }}</p>
+    <img src="{{ image }}" alt="Image">
+    
+    <h2>Employee Data</h2>
+    {% for employee in employeeData %}
+        <p>Name: {{ employee.name }}</p>
+        <p>Position: {{ employee.position }}</p>
+        <p>Start Date: {{ employee.startDate }}</p>
+        <p>End Date: {{ employee.endDate }}</p>
+        <p>Total Hours: {{ employee.totalHours }}</p>
+        <p>Hourly Rate: {{ employee.hourlyRate }}</p>
+        <p>Amount: {{ employee.amount }}</p>
+    {% endfor %}
+</body>
+</html>
